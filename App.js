@@ -1,26 +1,17 @@
 import {NavigationContainer} from "@react-navigation/native";
 import {createStackNavigator} from "@react-navigation/stack";
-import HomeScreens from "../screens/HomeScreens";
+import HomeScreen from "./screens/HomeScreens";
 
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigation>
+      <Stack.Navigator>
         <Stack.Screen options={{headerShown: false}}
                       name={"Home"}
-                      component={HomeScreens} />
-      </Stack.Navigation>
+                      component={HomeScreen} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

@@ -1,10 +1,10 @@
-import {Text, View} from "react-native";
-import colors from "../Colors";
+import {View, StyleSheet, Image} from "react-native";
+import colors from "../design/colors";
 
 export default function Header() {
     return (
-        <View>
-            <Image source={require('../assets/logo.png')} />
+        <View style={styles.container}>
+            <Image source={require('../assets/Logo.png')} />
         </View>
     )
 }
